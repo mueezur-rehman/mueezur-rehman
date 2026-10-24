@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){var t=null;try{t=localStorage.getItem('mr-theme');}catch(e){}if(t!=='light'&&t!=='dark'){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark';}document.documentElement.setAttribute('data-theme',t);document.documentElement.classList.add('js');})();</script>
+<title>LeadGenPro — Lead Database SaaS Case Study | Mueezur Rehman</title>
+<meta name="description" content="How I built LeadGenPro, an Apollo-style lead database with enrichment from 8+ sources — +300% lead volume and +35% conversion.">
+<link rel="canonical" href="https://mueezurrehman.com/work/leadgenpro.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeadGenPro — Lead Database SaaS Case Study">
+<meta property="og:description" content="An Apollo-style lead database with automated enrichment from 8+ data sources.">
+<meta property="og:image" content="https://mueezurrehman.com/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mueezur Rehman - Full-Stack Developer & Digital Platform Architect">
+<meta name="twitter:image:alt" content="Mueezur Rehman - Full-Stack Developer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#06070C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%237C6CFF'/%3E%3Ctext x='50' y='72' font-family='Georgia' font-size='62' font-style='italic' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-ur" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10M7 17 17 7"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3ZM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3-.02-2.96-1.8-2.96-1.8 0-2.08 1.4-2.08 2.86V21h-4V9Z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.35 4.8-4.58 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2h3.3l-7.2 8.2L23.5 22h-6.6l-5.2-6.8L5.7 22H2.3l7.7-8.8L1.6 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.4 3.9H5.5L17.7 20Z"/></symbol>
+</defs></svg>
+
+<div class="noise" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<nav class="nav" id="nav" aria-label="Primary">
+  <div class="container nav-inner">
+    <a href="../index.html" class="brand" aria-label="Mueezur Rehman — home">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span>Mueezur Rehman<small>Full-Stack · Platforms</small></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#services">Services</a>
+      <a href="../index.html#process">Process</a>
+      <a href="../index.html#testimonials">Clients</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="kbd-hint" id="paletteBtn" type="button" aria-label="Open command menu">
+        <svg aria-hidden="true"><use href="#i-search"/></svg> Search <kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle colour theme">
+        <svg aria-hidden="true" data-theme-icon="dark"><use href="#i-sun"/></svg>
+        <svg aria-hidden="true" data-theme-icon="light" style="display:none"><use href="#i-moon"/></svg>
+      </button>
+      <a href="../index.html#contact" class="btn btn-primary" style="display:none" id="navCta">Start a project</a>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <svg aria-hidden="true" class="i-burger"><use href="#i-menu"/></svg>
+        <svg aria-hidden="true" class="i-close" style="display:none"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <section class="case-hero">
+    <div class="fx"><span class="aurora a1"></span><span class="aurora a2"></span></div>
+    <div class="container" style="position:relative;z-index:1">
+      <div class="crumb"><a href="../index.html#work">Work</a> <svg aria-hidden="true"><use href="#i-arrow"/></svg> <span>LeadGenPro</span></div>
+      <span class="eyebrow">🇮🇳 India · SaaS Platform · 2024</span>
+      <h1>LeadGenPro — an Apollo-style lead database, built lean.</h1>
+      <p class="lead">A lead-generation platform with search, advanced filters, a built-in CRM and automated enrichment across 8+ data sources — replacing hours of manual prospecting.</p>
+
+      <div class="case-meta">
+        <div><div class="k">Client</div><div class="v">LeadGenPro</div></div>
+        <div><div class="k">Role</div><div class="v">Full-stack developer &amp; data engineer</div></div>
+        <div><div class="k">Timeline</div><div class="v">6 weeks · 2024</div></div>
+        <div><div class="k">Region</div><div class="v">India</div></div>
+      </div>
+
+      <div class="case-cover">
+        <div class="cover" style="--c1:#A78BFA; --c2:#F472B6;"><span>LG</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-body">
+    <div class="container">
+      <div class="case-grid">
+        <aside class="case-nav" aria-label="Case study sections">
+          <h5>On this page</h5>
+          <a href="#overview">Overview</a>
+          <a href="#challenge">The challenge</a>
+          <a href="#solution">What I built</a>
+          <a href="#results">Results</a>
+          <a href="#stack">Tech stack</a>
+        </aside>
+
+        <article class="prose">
+          <h2 id="overview">Overview</h2>
+          <p>LeadGenPro wanted a smarter way to find and reach prospects than copy-pasting from scattered sources. The goal: a single, searchable database that enriches every record automatically and plugs straight into a sales workflow.</p>
+          <p>I built the data pipeline, the search experience and the CRM around a clean API — so the product feels instant even over large datasets.</p>
+
+          <h2 id="challenge">The challenge</h2>
+          <p>Great lead data is messy. Records arrive with missing fields, duplicates and stale contact details, and sales teams abandon tools that feel slow or noisy.</p>
+          <ul>
+            <li>Prospecting spread across tools with no single source of truth.</li>
+            <li>Incomplete records — missing emails, titles and company data.</li>
+            <li>Duplicate entries eroding trust in the database.</li>
+            <li>Slow search that made filtering impractical at scale.</li>
+          </ul>
+
+          <h2 id="solution">What I built</h2>
+          <p>The platform combines a scraping and enrichment engine with a fast, filter-heavy interface.</p>
+          <ul>
+            <li><strong>Search &amp; filters:</strong> query millions of records by role, industry, location and more.</li>
+            <li><strong>Automated enrichment:</strong> data pulled and merged from 8+ platforms.</li>
+            <li><strong>Deduplication &amp; cleaning:</strong> normalised records with validation rules.</li>
+            <li><strong>Built-in CRM:</strong> list building, status tracking and export to sales tools.</li>
+            <li><strong>AI scoring:</strong> leads ranked by fit so teams focus on the best opportunities.</li>
+          </ul>
+
+          <div class="pull-quote">
+            <p>“What used to be a full day of prospecting now takes twenty minutes.”</p>
+            <cite>— Growth lead, LeadGenPro</cite>
+          </div>
+
+          <h2 id="results">Results</h2>
+          <p>The enriched database changed how the team spends its time — from hunting to closing.</p>
+          <div class="result-cards">
+            <div class="card result-card"><div class="n">+300%</div><div class="l">Lead volume</div></div>
+            <div class="card result-card"><div class="n">60 min</div><div class="l">Avg. response</div></div>
+            <div class="card result-card"><div class="n">+35%</div><div class="l">Conversion</div></div>
+            <div class="card result-card"><div class="n">8+</div><div class="l">Data sources</div></div>
+          </div>
+
+          <div class="gallery">
+            <div class="frame">Lead search</div>
+            <div class="frame">Enrichment pipeline</div>
+            <div class="frame">CRM list view</div>
+            <div class="frame">AI lead scoring</div>
+          </div>
+
+          <h2 id="stack">Tech stack</h2>
+          <div class="stack">
+            <span class="tag">Python</span><span class="tag">Django</span><span class="tag">React</span>
+            <span class="tag">Scrapy</span><span class="tag">PostgreSQL</span><span class="tag">AI scoring</span>
+          </div>
+
+          <div class="next-proj">
+            <a href="smart-school.html" class="card">
+              <div>
+                <div class="k">Next project</div>
+                <div class="t">Smart School — complete school ERP</div>
+              </div>
+              <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="fx"><span class="aurora a1"></span></div>
+    <div class="container">
+      <div class="cta-inner reveal">
+        <h2 class="h2">Building a data-heavy product?</h2>
+        <p class="lead">Let's scope it together — free consultation, no obligation.</p>
+        <div class="cta-actions">
+          <a href="../index.html#contact" class="btn btn-primary btn-lg">Start a project <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a href="https://wa.me/919522996669" target="_blank" rel="noopener" class="btn btn-ghost btn-lg"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp me</a>
+        </div>
+        <div class="cta-note">No obligation — just honest, expert advice.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <h3>Mueezur Rehman</h3>
+        <div class="f-role">Full-Stack Developer &amp; Platform Architect</div>
+        <p>Building high-performance web applications for global businesses — 15+ projects delivered across 40+ countries.</p>
+        <div class="f-social">
+          <a href="https://linkedin.com/in/mueezurrehman" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+          <a href="https://github.com/mueezurrehman" target="_blank" rel="noopener" aria-label="GitHub"><svg aria-hidden="true"><use href="#i-github"/></svg></a>
+          <a href="https://x.com/mueezurrehman" target="_blank" rel="noopener" aria-label="X"><svg aria-hidden="true"><use href="#i-x"/></svg></a>
+          <a href="https://wa.me/919522996669" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#process">Process</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Case studies</h4>
+        <ul>
+          <li><a href="al-wholesale.html">Al Wholesale</a></li>
+          <li><a href="canadatrado.html">Canadatrado</a></li>
+          <li><a href="leadgenpro.html">LeadGenPro</a></li>
+          <li><a href="smart-school.html">Smart School</a></li>
+          <li><a href="all-cars-365.html">All Cars 365</a></li>
+          <li><a href="eco-choice.html">Eco Choice Group</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:mueez.leadsbytech@gmail.com">mueez.leadsbytech@gmail.com</a></li>
+          <li><a href="tel:+919522996669">+91 9522 996 669</a></li>
+          <li>Burhanpur, MP, India</li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <div>© <span data-year>2026</span> Mueezur Rehman. Built with precision.</div>
+      <div class="links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919522996669" target="_blank" rel="noopener" class="fab" aria-label="Chat on WhatsApp"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+<button class="to-top" id="toTop" type="button" aria-label="Back to top"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="toast-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
+  <div><div class="toast-title" id="toastTitle"></div><div class="toast-msg" id="toastMsg"></div></div>
+</div>
+
+<div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Command menu">
+  <div class="palette-box">
+    <div class="palette-input-wrap">
+      <svg aria-hidden="true"><use href="#i-search"/></svg>
+      <input id="paletteInput" type="text" placeholder="Search pages, case studies, actions…" aria-label="Search">
+    </div>
+    <div class="palette-list" id="paletteList">
+      <button class="palette-item" data-href="index.html"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Home<span class="pi-k">Page</span></button>
+      <button class="palette-item" data-href="#about"><svg aria-hidden="true"><use href="#i-arrow"/></svg>About me<span class="pi-k">Section</span></button>
+      <button class="palette-item" data-href="#work"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Work<span class="pi-k">Section</span></button>
+      <button class="palette-item" data-href="#contact"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Contact<span class="pi-k">Section</span></button>
+      <button class="palette-item" data-href="work/al-wholesale.html"><svg aria-hidden="true"><use href="#i-arrow-ur"/></svg>Case study · Al Wholesale<span class="pi-k">UAE</span></button>
+      <button class="palette-item" data-href="work/canadatrado.html"><svg aria-hidden="true"><use href="#i-arrow-ur"/></svg>Case study · Canadatrado<span class="pi-k">Canada</span></button>
+      <button class="palette-item" data-href="work/leadgenpro.html"><svg aria-hidden="true"><use href="#i-arrow-ur"/></svg>Case study · LeadGenPro<span class="pi-k">India</span></button>
+      <button class="palette-item" data-href="work/smart-school.html"><svg aria-hidden="true"><use href="#i-arrow-ur"/></svg>Case study · Smart School<span class="pi-k">India</span></button>
+      <button class="palette-item" data-href="work/all-cars-365.html"><svg aria-hidden="true"><use href="#i-arrow-ur"/></svg>Case study · All Cars 365<span class="pi-k">UAE</span></button>
+      <button class="palette-item" data-href="work/eco-choice.html"><svg aria-hidden="true"><use href="#i-arrow-ur"/></svg>Case study · Eco Choice Group<span class="pi-k">UAE</span></button>
+      <button class="palette-item" data-action="toggle-theme"><svg aria-hidden="true"><use href="#i-moon"/></svg>Toggle theme<span class="pi-k">Action</span></button>
+      <button class="palette-item" data-action="copy-email" data-copy-value="mueez.leadsbytech@gmail.com"><svg aria-hidden="true"><use href="#i-copy"/></svg>Copy email address<span class="pi-k">Action</span></button>
+      <button class="palette-item" data-action="email"><svg aria-hidden="true"><use href="#i-mail"/></svg>Send an email<span class="pi-k">Action</span></button>
+      <div class="palette-empty" style="display:none">No results found.</div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
